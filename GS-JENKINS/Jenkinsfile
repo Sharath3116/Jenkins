@@ -1,7 +1,11 @@
 pipeline{
-    agent any
-
-    stages {
+    agent {
+        node {
+            label 'GS Node'
+        }
+    }
+    
+        stages {
         stage ('build'){
             steps {
                 echo "building.."
