@@ -16,17 +16,17 @@ pipeline{
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
             stages {
-        stage ('build'){
+        stage ('BUILD'){
             steps {
                 echo "building.."
             }
         }
-         stage ('test'){
+         stage ('TEST'){
             steps {
                 echo "testing.."
              }
         }
-         stage ('deploy'){
+         stage ('DEPLOY'){
             steps {
                echo "deploying.."
             }
