@@ -26,12 +26,12 @@ pipeline{
                 echo "testing.."
              }
         }
-         stage ('DEPLOY'){
+         stage ('DEPLOY FUCK'){
             steps {
                echo "deploying.."
             }
         }
-        stage('check PARAM') {
+        stage('fUCK PARAM') {
             steps {
                 echo "Hello ${params.PERSON}"
 
