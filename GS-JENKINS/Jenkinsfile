@@ -1,23 +1,25 @@
-pipeline{
-    agent{
+pipeline {
+    agent {
         node {
             label 'gs_agent'
         }
     }
+
     stages {
-        stage('INIT')
+        stage('INIT') {
             steps {
-                sh """
-                terraform init
-                """
+                sh '''
+                    terraform init
+                '''
             }
-
         }
-        stage('PLAN')
-            steps {
-                sh """
-                terraform plan
-                """
-            }
- }
 
+        stage('PLAN') {
+            steps {
+                sh '''
+                    terraform plan
+                '''
+            }
+        }
+    }
+}
